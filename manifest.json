@@ -1,0 +1,12 @@
+{
+  "name": "Analog Clock",
+  "version": "2.1",
+  "description": "Analog Clock with smooth animation, digital time, theme toggle, and timezone support",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "128": "2.png"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analog Clock</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./2.png" type="image/x-icon">
+</head>
+
+<body>
+  <h1>Analog Clock</h1>
+
+  <div class="controls">
+    <select id="timezone">
+      <option value="local">Local Time</option>
+      <option value="utc">UTC</option>
+      <option value="offset">Custom Offset</option>
+    </select>
+
+    <input
+      type="number"
+      id="offset"
+      placeholder="UTC ± hours"
+      min="-12"
+      max="14"
+      hidden
+    />
+
+    <button id="themeToggle">🌙</button>
+  </div>
+
+  <div id="digital">00:00:00</div>
+
+  <div id="container">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+    <div id="center"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

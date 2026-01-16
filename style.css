@@ -1,0 +1,96 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --hand-hour-minute: #1f2937; 
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+#digital {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+/* Clock */
+#container {
+  position: relative;
+  background-image: url("./clock.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: min(80vw, 380px);
+  height: min(80vw, 380px);
+}
+
+/* Clock Hands */
+#hour,
+#minute,
+#second {
+  position: absolute;
+  border-radius: 10px;
+  transform-origin: bottom center;
+}
+
+#hour {
+  width: 2.2%;
+  height: 26%;
+  top: 24%;
+  left: 48.9%;
+  background: var(--hand-hour-minute);
+}
+
+#minute {
+  width: 1.6%;
+  height: 34%;
+  top: 16%;
+  left: 49.2%;
+  background: var(--hand-hour-minute);
+}
+
+#second {
+  width: 1%;
+  height: 40%;
+  top: 10%;
+  left: 49.5%;
+  background: red;
+}
+
+#center {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: black;
+  border-radius: 50%;
+  top: 48.8%;
+  left: 48.8%;
+  z-index: 5;
+}
